@@ -13,7 +13,6 @@ module.exports = {
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
-    project: true,
     tsconfigRootDir: __dirname,
   },
   plugins: ["react-refresh"],
@@ -23,5 +22,8 @@ module.exports = {
       { allowConstantExport: true },
     ],
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-assignment": "off",
   },
 };

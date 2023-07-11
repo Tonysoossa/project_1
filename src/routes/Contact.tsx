@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import { Form } from "react-router-dom";
 
-
 export function Contact() {
   const contact = {
     first: "Your",
@@ -27,7 +26,7 @@ export function Contact() {
           ) : (
             <i>No Name</i>
           )}{" "}
-          <Favorite contact= "contact" />
+          <Favorite contact="contact" />
         </h1>
 
         {contact.twitter && (
@@ -67,7 +66,9 @@ interface FavoriteProps {
 
 export function Favorite({ contact }: FavoriteProps) {
   // yes, this is a `let` for later
-  let favorite = contact.favorite;
+  // FIXME: Never use let in react, the way it works makes the use of let prone to bugs.
+  // Not the right type, favorite should probalby be a different prop with a type of boolean, and look at the error you do not reassign it so its useless to have a let anyway
+  let favorite = contact?.favorite;
   return (
     <Form method="post">
       <button

@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ErrorPage } from "./ErrorPage.tsx";
 import { Contact } from "./routes/Contact.tsx";
 
+// FIXME : Even tho it works this way, it is not as easy to write, try to remake this beahvior using the jsx syntax
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const router = createBrowserRouter([
   {
     path: "/",
