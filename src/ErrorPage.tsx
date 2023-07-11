@@ -1,8 +1,11 @@
 import { useRouteError } from "react-router-dom";
 
 export function ErrorPage() {
-  const error = useRouteError();
-  console.error(error);
+  const error = {
+    statusText: "gang",
+    message: "gang message",
+  };
+  useRouteError();
 
   return (
     <div id="ErrorPage">

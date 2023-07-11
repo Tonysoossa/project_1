@@ -59,7 +59,11 @@ export function Contact() {
   );
 }
 
-export function Favorite({ contact }) {
+interface FavoriteProps {
+  contact: any
+}
+
+export function Favorite({ contact }: FavoriteProps) {
   // yes, this is a `let` for later
   // FIXME: Never use let in react, the way it works makes the use of let prone to bugs.
   // Not the right type, favorite should probalby be a different prop with a type of boolean, and look at the error you do not reassign it so its useless to have a let anyway
