@@ -1,5 +1,4 @@
 import { Form } from "react-router-dom";
-import React from "react";
 
 export function Contact() {
   const contact = {
