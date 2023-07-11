@@ -5,8 +5,7 @@ import "./index.css";
 import { Root } from "./routes/Root";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ErrorPage } from "./ErrorPage";
-import { Contact, Favorite } from "./routes/Contact";
-
+import { Contact } from "./routes/Contact";
 
 // FIXME : Even tho it works this way, it is not as easy to write, try to remake this beahvior using the jsx syntax
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
@@ -20,14 +19,6 @@ const router = createBrowserRouter([
         path: "contacts/:contactId",
         element: <Contact />,
       },
-      {
-        path: "contacts/:contactId",
-        element: <Contact />,
-      },
-      {
-        path: "contacts/:contactId",
-        element: <Favorite contact="shit"/>
-      }
     ],
   },
 ]);
