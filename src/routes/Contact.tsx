@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import { Form } from "react-router-dom";
 
-
 export function Contact() {
   const contact = {
     first: "Your",
@@ -27,7 +26,7 @@ export function Contact() {
           ) : (
             <i>No Name</i>
           )}{" "}
-          <Favorite contact= "contact" />
+          <Favorite contact="contact" />
         </h1>
 
         {contact.twitter && (
@@ -80,3 +79,5 @@ export function Favorite({ contact }: FavoriteProps) {
     </Form>
   );
 }
+
+export default Contact
